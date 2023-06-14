@@ -3,15 +3,18 @@
 
 Console.Write("Введите число от 100 до 999: "); // задать диапазон как по условию
 int number = int.Parse(Console.ReadLine()!); 
-if (100> number && number>1000)                 // позже добить не получется
+if (100 > number)                 // почему то не получилось с применением &&
 {
     Console.Write("Ведите трехзначное число!");
  
 }   
+else if(1000<number) {
+    Console.Write("Число оч большое!");
+}
 else
 {
-    int result = number % 10;                       // вывести остаток, что и будет последняя цифра от трехзначного числа
-    Console.Write(result);                          // вевести результат деления    
+    int result = number % 10;                       
+    Console.Write(result);                             
 }
 //int result = number % 10;                       // вывести остаток, что и будет последняя цифра от трехзначного числа
 //Console.Write(result);                          // вевести результат деления
