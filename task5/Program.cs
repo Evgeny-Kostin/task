@@ -3,5 +3,11 @@
 //4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4" 
 //2 -> " -2, -1, 0, 1, 2
 
-Console.WriteLine("Input number:");
-int number1 = int.Parse(Console.ReadLine()!);
+Console.Write("Введите число N: ");
+int number = int.Parse(Console.ReadLine()!);
+int i = number*-1;
+
+while (i<=number) {
+    Console.Write(i + " ");
+    i++;                    //ввести +1чтобы не ушло в бесконечность
+}
