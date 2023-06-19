@@ -7,6 +7,10 @@ int number = new Random().Next(100, 1000);                  // задаем от
                                                             // в этой строке можно ввести Console.WriteLine(number); тогда убрать из 10 строки number
 int firstValue = number/100;                                //находим первое число
 int secondValue = number%10;                                //находим вотрое число
-Console.WriteLine(number + " "+firstValue+""+secondValue);  // выводим полученный результат без пробелов чтобы получилось двузначное число.
+Console.WriteLine(number);  // выводим полученный результат без пробелов чтобы получилось двузначное число. 
+// изменение: выводим только рандомное число, а результат выводим ниже уже не написанием 2-х чисел в числом.
 // в зале применили Console.WriteLine($" {number} -> {firstValue} {secondValue}"); пробел между значениями убрать
 // тогда будет как в тз 456 -> 46.
+int res1 = firstValue*10;
+int res2 = res1 + secondValue;
+Console.WriteLine(res2);
