@@ -8,3 +8,5 @@ int number = new Random().Next(100, 1000);                  // задаем от
 int firstValue = number/100;                                //находим первое число
 int secondValue = number%10;                                //находим вотрое число
 Console.WriteLine(number + " "+firstValue+""+secondValue);  // выводим полученный результат без пробелов чтобы получилось двузначное число.
+// в зале применили Console.WriteLine($" {number} -> {firstValue} {secondValue}"); пробел между значениями убрать
+// тогда будет как в тз 456 -> 46.
