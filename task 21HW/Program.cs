@@ -21,3 +21,15 @@ int Prompt (string message)
 double DistanceBetweenPoints = Math.Sqrt(Math.Pow((numB1-numA1), 2) + Math.Pow((numB2-numA2), 2) + Math.Pow((numB3-numA3), 2));
 
 Console.WriteLine($"A ({numA1}, {numA2}, {numA3}); B ({numB1}, {numB2}, {numB3} -> {DistanceBetweenPoints})");
+// Math.Sqrt() – математическая функция которая извлекает квадратный корень. В аргументных скобках указывается значение числа, из которого нужно извлечь квадратный корень.
+
+// Math.Pow() – возведения числа в степень. В аргументных скобках через запятую указываются два аргумента (1-ый аргумент - число, которое возводим в степень, 2-ой – степень, в которую возводим число).
+
+// Пример: использование метода Math.sqrt()
+// Math.sqrt(9); // 3
+// Math.sqrt(2); // 1.414213562373095
+
+// Math.sqrt(1);  // 1
+// Math.sqrt(0);  // 0
+// Math.sqrt(-1); // NaN
+// Math.sqrt(-0); // -0
