@@ -19,6 +19,7 @@ int Prompt (string message)
     return num; 
 }
 double DistanceBetweenPoints = Math.Sqrt(Math.Pow((numB1-numA1), 2) + Math.Pow((numB2-numA2), 2) + Math.Pow((numB3-numA3), 2));
+//  Math.Sqrt((numB1-numA1)*(numB1-numA1) + (numB2-numA2)*(numB2-numA2) + (numB3-numA3)*(numB3-numA3));
 
 Console.WriteLine($"A ({numA1}, {numA2}, {numA3}); B ({numB1}, {numB2}, {numB3} -> {DistanceBetweenPoints})");
 // Math.Sqrt() – математическая функция которая извлекает квадратный корень. В аргументных скобках указывается значение числа, из которого нужно извлечь квадратный корень.
