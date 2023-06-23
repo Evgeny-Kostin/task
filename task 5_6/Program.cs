@@ -1,28 +1,27 @@
-﻿// Задача 35: Задайте одномерный массив из 123 случайных чисел.
-// Найдите количество элементов массива, значения которых лежат в
-// отрезке [10,99].
-// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для
-// 123
-// [5, 18, 123, 6, 2] -> 1
-// [1, 2, 3, 6, 2] -> 0
-// [10, 11, 12, 13, 14] -> 5
+﻿// Домашнее задание
+// Задание Пример
+// Задача 34: Задайте массив заполненный случайными
+// положительными трёхзначными числами. Напишите
+// программу, которая покажет количество чётных чисел в
+// массиве.
+// [345, 897, 568, 234] -> 2
 
 using System;
 class HelloWorld {
   static void Main()
   {
-        int [] arr=GetArray(123,-100,100);
+      
+        int [] arr=GetArray(20,100,999);
         PrintArray(arr);
-        
-            Console.Write($"\ncount: {countinrange(arr,10,99)}");
-       
+        int result=counteven(arr);
+        Console.Write($"\n{result}");
     }
-  static int countinrange(int[] arr,int rangeMin,int rangeMax)
+  static int counteven(int[] arr)
   {
       int count=0;
       foreach(int num in arr)
       {
-          if((num>=rangeMin)&&(num<=rangeMax))
+          if(num%2!=1)
           {
               ++count;
           }
