@@ -6,29 +6,32 @@
 //89126 -> 5
 
 //Console.WriteLine("Введите число: ");
-int userNum = TakeUserNum();
-int counter = CountNum(userNum);
-Console.WriteLine(counter);
+int userNum = TakeUserNum(); // получили число
+int counter = CountNum(userNum); // вызываем метод получения кол-ва цифр в числе
+Console.WriteLine(counter); // вывод на печать результат
 
-
-int CountNum(int userNum)
+int CountNum(int userNum) //метод 2 счет числа переадем число в (int userNum)
 {
-    int i = 0;
+    int i = 0; // переменная счетчик
 
-    while(userNum >= 1)
+    while(userNum >= 1) // до тех пор пока число больше 1
     {
-        userNum /= 10;
+        userNum /= 10; // uresNum = userNum / 10 (456/10=45 запомнили, 45/10=4 запомнили, 4/10=0,4)
         i++;
     }
 
     return i;
 }
 
-int TakeUserNum()
+int TakeUserNum() //описание метода получения числа
 {
     int userNum;
 
-    while(!int.TryParse(Console.ReadLine(), out userNum))
+    while(!int.TryParse(Console.ReadLine(), out userNum)) // возвращает само смог ли он спарсить Тру или фолс
+    // ! переворачивает значение спец логич оператор НЕТ. если спарсить смогли он возвращает тру и переворачивает чтобы выйти из цикла
+    // если спарсилось записывается в out userNum
+    // если не смог спарсить фолс обращаем в тру и заходим в цикл где сказано введите число
+    
         Console.WriteLine("Пожалуйста введите число!");
 
     return userNum;
