@@ -38,3 +38,5 @@ void PrintArray(int[] array)
 
     Console.WriteLine();
 }
+
+// int[] b = (int[])a.Clone();

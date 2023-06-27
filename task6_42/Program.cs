@@ -29,3 +29,29 @@
 
 // int number = Prompt("Введите число: ");
 // Transformation(number);
+
+Console.Write("Введите десятичное число: ");
+        int decimalNumber = int.Parse(Console.ReadLine());
+
+        string binaryNumber = DecimalToBinary(decimalNumber);
+
+        Console.WriteLine($"Двоичное представление числа {decimalNumber} равно: {binaryNumber}");
+    
+
+    static string DecimalToBinary(int decimalNumber)
+    {
+        if (decimalNumber == 0)
+        {
+            return "0";
+        }
+
+        string binary = "";
+        while (decimalNumber > 0)
+        {
+            int remainder = decimalNumber % 2;
+            binary = remainder.ToString() + binary;
+            decimalNumber = decimalNumber / 2;
+        }
+
+        return binary;
+    }
