@@ -1,54 +1,57 @@
-﻿// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
-// [-4, -8, 8, 2] -> [4, 8, -8, -2] 
-// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
-// 4; массив [6, 7, 19, 345, 3] -> нет
-// -3; массив [6, 7, 19, 345, 3] -> да
+﻿// Задача 32: Напишите программу замена элементов массива: положительные элементы замените
+// на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2]
+
 
 using System;
-class HelloWorld {
-  static void Main()
-  {
-        int [] arr=GetArray(20,-100,100);
+
+class HelloWorld
+{
+    static void Main()
+    {
+        int[] arr = GetArray(20, -100, 100);
         PrintArray(arr);
         Console.Write("\n");
-        int [] carr=changesign(arr);
+        int[] carr = changesign(arr);
         PrintArray(carr);
     }
-  static int [] changesign(int[] arr)
-  {
-      int [] result=new int[arr.Length];
-      for(int i=0; i<arr.Length;++i)
-      {
-          result[i]=-1*arr[i];
-      }
-      return result;
-  }
-  static void PrintArray(int[] arr)
+
+    static int[] changesign(int[] arr)
+    {
+        int[] result = new int[arr.Length];
+        for (int i = 0; i < arr.Length; ++i)
+        {
+            result[i] = -1 * arr[i];
+        }
+        return result;
+    }
+
+    static void PrintArray(int[] arr)
     {
         // for (int i = 0; i < arr.Length; i++)
-    // {
-    //     Console.Write($"{arr[i]} ");
-    // }
-    foreach (int el in arr)
-    {
-        Console.Write($"{el} ");
+        // {
+        //     Console.Write($"{arr[i]} ");
+        // }
+        foreach (int el in arr)
+        {
+            Console.Write($"{el} ");
+        }
     }
-    }
+
     static int Prompt(string message)
     {
         Console.Write(message);
         int number = int.Parse(Console.ReadLine());
-            return number;
-    }   
-    static int[] GetArray(int size, int minValue, int maxValue)
-{
-    int[] result = new int[size];
-    for (int i = 0; i < result.Length; i++)
-    {
-        result[i] = new Random().Next(minValue, maxValue + 1);
-
+        return number;
     }
-    return result;
-}
-}
 
+    static int[] GetArray(int size, int minValue, int maxValue)
+    {
+        int[] result = new int[size];
+        for (int i = 0; i < result.Length; i++)
+        {
+            result[i] = new Random().Next(minValue, maxValue + 1);
+        }
+        return result;
+    }
+}
