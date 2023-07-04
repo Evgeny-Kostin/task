@@ -27,8 +27,8 @@ void PrintArray(double[] numbers)
         Console.WriteLine(numbers[i] + " ");
     }
     
-    // Console.Write("]");
-    // Console.WriteLine();
+    Console.Write("]");
+    Console.WriteLine();
 }
  
 
