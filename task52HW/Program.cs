@@ -1,28 +1,41 @@
-﻿Console.WriteLine("введите номер строки");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите номер столбца");
-int m = Convert.ToInt32(Console.ReadLine());
-int [,] numbers = new int [10,10];
-FillArrayRandomNumbers(numbers);
+﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое
+// элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
-{
-    Console.WriteLine("такого элемента нет");
-}
-else
-{
-    Console.WriteLine($"значение элемента {n} строки и {m} столбца равно {numbers[n-1,m-1]}");
-}
+//см семинар 8
 
+Console.WriteLine("Введите колличество сторок: ");
+int n = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите колличество столбцов");
+int m = int.Parse(Console.ReadLine());
+int [,] numbers = new int [n,m];
+GetArray(numbers);
 PrintArray(numbers);
+Console.WriteLine(""); 
+for (int j = 0; j < numbers.GetLength(1); j++)
+{
+    double avarage = 0;
+    for (int i = 0; i < numbers.GetLength(0); i++)
+    {
+        avarage = (avarage + numbers[i, j]);
+    }
+    avarage = avarage / n;
+    Console.Write(avarage + "; ");
+}
 
-void FillArrayRandomNumbers(int[,] array)
+Console.WriteLine($"<- Среднее арифметическое каждого столбца.");
+
+void GetArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
         {        
             for (int j = 0; j < array.GetLength(1); j++)
             {
-                array [i,j] = new Random().Next(-100, 100)/10;
+                array [i,j] = new Random().Next(0, 100)/10;
             }   
         }
 }
@@ -31,12 +44,12 @@ void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write("[ ");
+        
         for (int j = 0; j < array.GetLength(1); j++)
         {
             Console.Write(array[i,j] + " ");
         }   
-        Console.Write("]");
+        
         Console.WriteLine(""); 
     }
 }
